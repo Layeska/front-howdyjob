@@ -53,10 +53,24 @@ button {
     padding: 8px;
 }
 
+.iconoMenu svg {
+    display: none;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 935px) {
     .menu {
         /*background: sandybrown;*/
         position: relative;
+    }
+
+    .iconoMenu svg {
+        display: flex;
+        position: absolute;
+        right: 3rem;
+        top: 2rem;
+        width: 2rem;
+        height: 1.6rem;
     }
 
     .menu .second {
