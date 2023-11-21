@@ -1,18 +1,18 @@
-.main {
-    /*background: salmon;*/
+/*.main {
+    background: salmon;
     display: flex;
     justify-content: space-between;
     margin: 1rem 2rem;
     position: relative;
 }
 
-/*.img {
+.img {
     width: 100%;
     position: absolute;
     top: 0;
     z-index: -1;
     margin-top: -6rem;
-}*/
+}
 
 .fondo {
     background: papayawhip;
@@ -24,10 +24,11 @@
 
 .fondo img {
     width: 25rem;
+    height: fit-content;
 }
 
 .second {
-    /*background: sandybrown;*/
+    background: sandybrown;
     text-align: start;
     width: 60%;
 }
@@ -36,16 +37,34 @@
     font-family: 'Manrope', sans-serif;
     margin-top: 2rem;
     color: rgb(230, 237, 244);
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
 .second h2:first-child {
-    font-size: 3.4rem;
+    font-size: 4rem;
     font-family: 'Noto', sans-serif;
     color: #42ad8a;
-    font-weight: 100;
+    font-weight: 700;
 }
 
-.second h2 {
+.second .buscador {
+    margin-top: 3rem;
+}
+
+.second .buscador input {
+    width: 30%;
+    padding: 0.3rem;
+    border: 1px solid white;
+}
+
+.second .buscador button {
+    padding: 0.3rem;
+}
+*/
+
+img {
+    width: 50%;
+    float: right;
+    padding: 1rem 2rem;
 }
