@@ -1,10 +1,10 @@
-.menu {
-    /*background: salmon;*/
+/*.menu {
+    /*background: salmon;
     padding: 2rem;
     display: flex;
     justify-content: space-between;
     font-family: 'Raleway', sans-serif;
-    /*font-family: 'Noto Sans', sans-serif;*/
+    /*font-family: 'Noto Sans', sans-serif;
 }
 
 .menu div:first-child {
@@ -21,7 +21,7 @@
 
 .menu .second {
     width: 100%;
-    /*background: forestgreen;*/
+    /*background: forestgreen;
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
@@ -39,33 +39,42 @@
 }
 
 .login {
-    /*background: sandybrown;*/
+    /*background: sandybrown;
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-left: 1.3rem;
 }
 
-button {
+.login button {
     color: white;
     background: transparent;
     border: solid 1px rgb(255, 255, 255);
     padding: 8px;
 }
 
-.iconoMenu svg {
+/*.iconoMenu button {
     display: none;
     cursor: pointer;
 }
 
+.iconoMenu {
+    background: red;
+    position: absolute;
+}
+
 @media screen and (max-width: 935px) {
     .menu {
-        /*background: sandybrown;*/
+        /*background: sandybrown;
         position: relative;
     }
 
-    .iconoMenu svg {
-        display: flex;
+    .iconoMenu {
+        
+        background: red;
+    }
+
+    /*.iconoMenu svg {
         position: absolute;
         right: 3rem;
         top: 2rem;
@@ -89,10 +98,146 @@ button {
         flex-direction: column;
         text-align: start;
     }
-    
+
     .menu .login {
         flex-direction: column;
         align-items: flex-start;
         margin: 0;
+    }
+}*/
+
+
+.menu {
+    /*background: yellow;*/
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.menu .imagen {
+    /*background: red;*/
+    width: 15rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.menu .imagen img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.menu .second {
+    /*border: solid 2px grey;*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.second .icon_menu, .icon_menu_close {
+    display: none;
+}
+
+.second nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.second nav ul li {
+    cursor: pointer;
+}
+
+.second .login {
+    display: flex;
+    /*background: darkcyan;*/
+    gap: 1rem;
+    align-items: center;
+}
+
+.second div svg {
+    fill: rgb(255, 255, 255);
+}
+
+.second div button {
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.second div button svg {
+    padding-right: 0.3rem;
+   /* margin-bottom: 0.5rem;*/
+    /*background: yellow !important;*/
+}
+
+.buttons  {
+    background: #276955 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1030px) {
+    .menu {
+        background: rgb(162, 162, 193, 0.4);
+        flex-direction: column;
+    }
+
+    .second {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .second .login {
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .menu {
+        background: rgb(143, 170, 180, 0.6);
+        width: fit-content;
+        height: 100vh;
+        position: relative;
+        padding-top: 3rem;
+    }
+
+    .menu .second .icon_menu {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        top: 1.6rem;
+        left: 1rem;
+        padding: 1rem;
+    }
+    
+    .icon_menu_close {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        top: 1.6rem;
+        left: 1rem;
+        padding: 1rem;
+    }
+
+    .menu .second nav ul, .login, .buttons {
+        flex-direction: column;
+        margin: 1rem;
+        /*background: red;*/
+    }
+
+    .buttons {
+        background: transparent !important;
+        gap: 1rem;
+    }
+
+    .buttons button {
+        background: #276955 !important;
+        width: 100%;
     }
 }
