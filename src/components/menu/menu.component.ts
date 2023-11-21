@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  clic: boolean
+  clic: boolean = true
 
   constructor() {
-    this.clic = true
+    //this.clic = false
     console.log(this.clic)
   }
 }
