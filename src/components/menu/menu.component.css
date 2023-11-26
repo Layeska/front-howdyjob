@@ -214,8 +214,10 @@
         top: 1.6rem;
         left: 1rem;
         padding: 1rem;
+        background: yellow;
+        z-index: 20;
     }
-    
+
     .icon_menu_close {
         display: flex;
         position: absolute;
@@ -223,6 +225,8 @@
         top: 1.6rem;
         left: 1rem;
         padding: 1rem;
+        background: yellowgreen;
+        z-index: 10;
     }
 
     .menu .second nav ul, .login, .buttons {
