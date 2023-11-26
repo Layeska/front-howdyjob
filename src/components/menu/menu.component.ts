@@ -9,10 +9,14 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 export class MenuComponent implements AfterViewInit  {
   clic: boolean = false
+  width = window.innerWidth;
+  height = window.innerHeight;
 
   constructor() {
-    // this.clic = true
-    // console.log(this.clic)
+    console.log(`Ancho del dispositivo: ${this.width}px`);
+    console.log(`Alto del dispositivo: ${this.height}px`);
+
+    this.clic = this.width >= 800 ? true : false
   }
 
   ngAfterViewInit() {
@@ -22,7 +26,7 @@ export class MenuComponent implements AfterViewInit  {
   cliciado = () => {
     //return true
     this.clic = true
-     console.log(this.clic)
+    console.log(this.clic)
   }
 
   cerrado = () => {
