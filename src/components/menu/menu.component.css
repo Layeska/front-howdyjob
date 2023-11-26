@@ -1,122 +1,20 @@
-/*.menu {
-    /*background: salmon;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Raleway', sans-serif;
-    /*font-family: 'Noto Sans', sans-serif;
-}
-
-.menu div:first-child {
-    width: 20%;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.menu div:first-child img {
-    width: 170px;
-    cursor: pointer;
-}
-
-.menu .second {
-    width: 100%;
-    /*background: forestgreen;
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-    align-items: center;
-}
-
-.menu nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.menu nav ul li {
-    cursor: pointer;
-}
-
-.login {
-    /*background: sandybrown;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-left: 1.3rem;
-}
-
-.login button {
-    color: white;
-    background: transparent;
-    border: solid 1px rgb(255, 255, 255);
-    padding: 8px;
-}
-
-/*.iconoMenu button {
-    display: none;
-    cursor: pointer;
-}
-
-.iconoMenu {
-    background: red;
-    position: absolute;
-}
-
-@media screen and (max-width: 935px) {
-    .menu {
-        /*background: sandybrown;
-        position: relative;
-    }
-
-    .iconoMenu {
-        
-        background: red;
-    }
-
-    /*.iconoMenu svg {
-        position: absolute;
-        right: 3rem;
-        top: 2rem;
-        width: 2rem;
-        height: 1.6rem;
-    }
-
-    .menu .second {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 250px;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-top: 5rem;
-        background: rgb(146, 133, 146);
-    }
-
-    .menu nav ul {
-        flex-direction: column;
-        text-align: start;
-    }
-
-    .menu .login {
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0;
-    }
-}*/
-
-
 .menu {
-    /*background: yellow;*/
+    /**background: rgba(43, 43, 43, 1);*/
+    background: rgb(1, 0, 5, 0.9);
+    position: absolute;
+    z-index: 30;
+    top: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 100vh;
+    padding-top: 3rem;
+    transition: width 0.3s ease-out;
     font-family: 'Raleway', sans-serif;
 }
 
 .menu .imagen {
-    /*background: red;*/
     width: 15rem;
     padding: 0 2rem;
     display: flex;
@@ -129,20 +27,63 @@
 }
 
 .menu .second {
-    /*border: solid 2px grey;*/
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
-.second .icon_menu, .icon_menu_close {
-    display: none;
+.menu .second .icon_menu {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 1.6rem;
+    left: 1rem;
+    z-index: 20;
+}
+
+.menu .second .icon_menu svg, .icon_menu_close svg {
+    cursor: pointer;
+    padding: 5px;
+    fill: white;
+    font-size: 1.5rem;
+}
+
+.menu .second .icon_menu button, .icon_menu_close button {
+    background: transparent;
+    border: none;
+}
+
+.icon_menu_close {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 1.6rem;
+    left: 1.6rem;
+    z-index: 10;
+}
+
+.menu .second nav ul, .login, .buttons {
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.buttons {
+    background: transparent !important;
+    gap: 1rem;
+}
+
+.buttons button {
+    background: #276955 !important;
+    width: 100%;
 }
 
 .second nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -152,9 +93,9 @@
 
 .second .login {
     display: flex;
-    /*background: darkcyan;*/
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .second div svg {
@@ -171,18 +112,21 @@
 
 .second div button svg {
     padding-right: 0.3rem;
-   /* margin-bottom: 0.5rem;*/
-    /*background: yellow !important;*/
 }
 
 .buttons  {
-    background: #276955 !important;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (min-width: 1000px) {
+    .second .icon_menu, .icon_menu_close {
+        display: none;
+    }
+}
+
+/*media screen and (max-width: 1030px) {
     .menu {
         background: rgb(162, 162, 193, 0.4);
         flex-direction: column;
@@ -197,51 +141,4 @@
         margin: 1rem;
     }
 }
-
-@media screen and (max-width: 560px) {
-    .menu {
-        background: rgb(143, 170, 180, 0.6);
-        width: fit-content;
-        height: 100vh;
-        position: relative;
-        padding-top: 3rem;
-    }
-
-    .menu .second .icon_menu {
-        display: flex;
-        position: absolute;
-        align-items: center;
-        top: 1.6rem;
-        left: 1rem;
-        padding: 1rem;
-        background: yellow;
-        z-index: 20;
-    }
-
-    .icon_menu_close {
-        display: flex;
-        position: absolute;
-        align-items: center;
-        top: 1.6rem;
-        left: 1rem;
-        padding: 1rem;
-        background: yellowgreen;
-        z-index: 10;
-    }
-
-    .menu .second nav ul, .login, .buttons {
-        flex-direction: column;
-        margin: 1rem;
-        /*background: red;*/
-    }
-
-    .buttons {
-        background: transparent !important;
-        gap: 1rem;
-    }
-
-    .buttons button {
-        background: #276955 !important;
-        width: 100%;
-    }
-}
+*/
