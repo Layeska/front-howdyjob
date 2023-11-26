@@ -16,7 +16,8 @@
 
 @media only screen and (orientation: landscape) {
     .menu {
-        height: 240vh;
+        height: 230vh;
+        width: 100vh;
     }
 }
 
