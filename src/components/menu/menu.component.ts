@@ -16,7 +16,7 @@ export class MenuComponent implements AfterViewInit  {
     console.log(`Ancho del dispositivo: ${this.width}px`);
     console.log(`Alto del dispositivo: ${this.height}px`);
 
-    this.clic = this.width >= 800 ? true : false
+    this.clic = this.width >= 800 ? true : false;
   }
 
   ngAfterViewInit() {
@@ -24,19 +24,13 @@ export class MenuComponent implements AfterViewInit  {
   }
 
   cliciado = () => {
-    //return true
-    this.clic = true
+    this.clic = true;
     console.log(this.clic)
   }
 
   cerrado = () => {
-    this.clic = false
+    this.clic = false;
     console.log(this.clic)
     //return false
-  }
-
-  handleClick() {
-    console.log('Se hizo clic en el botón');
-    // Puedes realizar otras acciones aquí según tus necesidades
   }
 }
