@@ -1,10 +1,10 @@
 .main {
-    /*background: salmon;*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 2rem 1rem;
+    padding-top: 2.4rem;
     position: relative;
 }
 
@@ -20,7 +20,6 @@
     background: papayawhip;
     width: fit-content;
     border-radius: 50%;
-    /*margin: 1rem 1rem 1rem 4rem;*/
     box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5);
 }
 
@@ -30,12 +29,11 @@
 }
 
 .second {
-    /*background: sandybrown;*/
     text-align: start;
     margin: 0.6rem 2rem;
 }
 
-.second h2:nth-child(2), p{
+.second h2:nth-child(2), p {
     font-family: 'Manrope', sans-serif;
     margin-top: 10px;
     color: rgb(230, 237, 244);
@@ -62,6 +60,7 @@
     padding: 1rem 5px;
     border-radius: 10px;
     border: none;
+    background: #f1e8e8;
   }
 
   .second .buscador button {
@@ -78,6 +77,49 @@
 .second .buscador button:hover {
   color: green;
 }
+
+@media screen and (min-width: 760px) {
+  .main {
+    margin-top: 1rem;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .second h2:first-child {
+    font-size: 2.2rem;
+  }
+
+  .second h2:nth-child(2) {
+    margin-top: 20px;
+  }
+
+  .second {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main {
+    margin-top: 3rem;
+    margin: auto;
+    padding: 0;
+  }
+
+  .second h2:first-child {
+    font-size: 3.5rem;
+  }
+
+  .second h2:nth-child(2) {
+    font-size: 1.5rem;
+  }
+
+  input {
+    padding: 1rem 1rem !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+}
+
+
 /*
 @media (min-width: 576px) {
     .main {
